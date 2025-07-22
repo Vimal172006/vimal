@@ -3,77 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anime Wallpaper</title>
-
-  <!-- Google Anime-style Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-
+  <title>Anime Wallpaper Gallery</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Kaushan Script', cursive;
-    }
-
     body {
-      background-image: url('https://wallpapercave.com/wp/wp11200236.jpg'); /* You can change this */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0e0e0e;
       color: white;
-      overflow: hidden;
     }
 
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(3px);
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    header {
+      background-color: #1c1c1c;
+      padding: 20px;
       text-align: center;
-      animation: fadeIn 2s ease-in;
+      font-size: 2em;
+      color: #ff4081;
     }
 
-    .content h1 {
-      font-size: 3.5rem;
-      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+      padding: 20px;
     }
 
-    .content p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      opacity: 0.85;
+    .wallpaper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .wallpaper img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .wallpaper:hover img {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c1c1c;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
-  <div class="content">
-    <h1>Welcome to Anime World</h1>
-    <p>Feel the vibe. Embrace the dream.</p>
+
+  <header>
+    Anime Wallpaper Gallery
+  </header>
+
+  <div class="gallery">
+    <div class="wallpaper">
+      <img src="https://wallpaperaccess.com/full/1122990.jpg" alt="Anime Wallpaper 1">
+    </div>
+    <div class="wallpaper">
+      <img src="https://wallpaperaccess.com/full/370782.jpg" alt="Anime Wallpaper 2">
+    </div>
+    <div class="wallpaper">
+      <img src="https://wallpaperaccess.com/full/386051.jpg" alt="Anime Wallpaper 3">
+    </div>
+    <div class="wallpaper">
+      <img src="https://wallpaperaccess.com/full/370758.jpg" alt="Anime Wallpaper 4">
+    </div>
+    <div class="wallpaper">
+      <img src="https://wallpaperaccess.com/full/1312041.jpg" alt="Anime Wallpaper 5">
+    </div>
+    <div class="wallpaper">
+      <img src="https://wallpaperaccess.com/full/1312025.jpg" alt="Anime Wallpaper 6">
+    </div>
   </div>
+
+  <footer>
+    &copy; 2025 Anime Wallpaper Site. All rights reserved.
+  </footer>
+
 </body>
 </html>
